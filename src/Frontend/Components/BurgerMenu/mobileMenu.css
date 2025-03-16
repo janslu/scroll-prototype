@@ -1,0 +1,60 @@
+.main-navigation-container {
+    @apply bg-gray-800 text-white sticky top-0 z-50;
+}
+
+.main-navigation-wrapper {
+    @apply mx-auto px-4 py-4 flex justify-between items-center;
+}
+
+/* Navigation styles */
+.site-navigation {
+    @apply fixed md:static top-0 right-0 h-full md:h-auto w-64 md:w-auto
+           bg-gray-800 z-50 translate-x-full md:translate-x-0;
+}
+
+/* Only apply transitions after initialization */
+.site-navigation.is-initialized {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.site-navigation.is-initialized.is-active {
+    @apply translate-x-0;
+}
+
+.nav-inner {
+    @apply p-6 md:p-0;
+}
+
+.nav-list {
+    @apply mt-8 md:mt-0 space-y-4 md:space-y-0
+           md:flex md:space-x-6;
+}
+
+.nav-list a {
+    @apply text-white hover:text-blue-300
+           block md:inline-block py-2 md:py-0;
+}
+
+/* Menu buttons */
+.menu-toggle {
+    @apply text-white md:hidden focus:outline-hidden cursor-pointer;
+}
+
+.burger-menu-icon {
+    @apply w-6 h-6;
+}
+
+.close-menu-button {
+    @apply absolute md:hidden top-4 right-4 text-white cursor-pointer;
+}
+
+/* Menu overlay */
+.menu-overlay {
+    @apply fixed inset-0 bg-gray-900/30 backdrop-blur-sm opacity-0 hidden z-40
+           transition-all duration-300 ease-in-out;
+}
+
+/* Active states */
+.menu-overlay.is-active {
+    @apply opacity-100 block;
+}

@@ -1,0 +1,19 @@
+/* Tailwind directives */
+@import 'tailwindcss';
+
+@import './StyleSheets/base/fonts.css' layer(base);
+
+@import './Components/ScrollAnimation/scrollAnimations.css' layer(components);
+@import './Components/BurgerMenu/mobileMenu.css' layer(components);
+@import './Components/SwiperGallery/swiper.css' layer(components);
+
+@theme {
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --color-background: #f5f5f5;
+}
+
+/* Custom CSS Variables */
+:root {
+  --slide-aspect-ratio: 5/3;
+  --header-height: 60px;
+}

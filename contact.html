@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kontakt - Fürsorgerische Zwangsmassnahmen</title>
+      <meta name="description" content="Kontaktieren Sie uns für Informationen zu fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen in der Schweiz" />
+      <script type="module" src="/src/Frontend/main.js"></script>
+      <link rel="stylesheet" href="/src/Frontend/styles.css">
+   </head>
+   <body class="bg-background text-gray-800">
+      <header class="bg-gray-800 text-white sticky top-0 z-50">
+         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo flex items-center gap-4">
+               <img src="images/map.png" alt="Logo" class="w-10 h-auto" />
+               <span class="font-semibold">FSZM</span>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="menu-toggle md:hidden" aria-expanded="false" aria-label="Toggle menu">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+               </svg>
+            </button>
+
+            <!-- Desktop navigation -->
+            <nav class="hidden md:block">
+               <ul class="flex space-x-6">
+                  <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+                  <li><a href="about.html" class="hover:text-blue-300">Über uns</a></li>
+                  <li><a href="contact.html" class="hover:text-blue-300 text-blue-400">Kontakt</a></li>
+               </ul>
+            </nav>
+         </div>
+
+         <!-- Mobile menu -->
+         <div class="mobile-menu">
+            <div class="p-6">
+               <button class="absolute top-4 right-4 text-white" aria-label="Close menu" data-close-menu>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+               </button>
+               <ul class="mt-8 space-y-4">
+                  <li><a href="index.html" class="text-white hover:text-blue-300 block py-2">Home</a></li>
+                  <li><a href="about.html" class="text-white hover:text-blue-300 block py-2">Über uns</a></li>
+                  <li><a href="contact.html" class="text-blue-400 hover:text-blue-300 block py-2">Kontakt</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <!-- Menu overlay -->
+         <div class="menu-overlay"></div>
+      </header>
+
+      <main>
+         <div class="content">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6">Kontakt</h1>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+               <div>
+                  <h2 class="text-2xl font-semibold mb-4">Kontaktieren Sie uns</h2>
+                  <p class="mb-6">
+                     Für Fragen, Anregungen oder Informationen zu fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen 
+                     in der Schweiz stehen wir Ihnen gerne zur Verfügung.
+                  </p>
+                  <div class="mb-6">
+                     <h3 class="font-medium mb-2">Adresse:</h3>
+                     <address class="not-italic">
+                        FSZM Dokumentationsstelle<br>
+                        Musterstrasse 123<br>
+                        8000 Zürich<br>
+                        Schweiz
+                     </address>
+                  </div>
+                  <div class="mb-6">
+                     <h3 class="font-medium mb-2">Kontakt:</h3>
+                     <p>Telefon: +41 44 123 45 67</p>
+                     <p>E-Mail: info@fszm-doku.ch</p>
+                  </div>
+                  <div>
+                     <h3 class="font-medium mb-2">Öffnungszeiten:</h3>
+                     <p>Montag bis Freitag: 9:00 - 17:00 Uhr</p>
+                     <p>Termine auch nach Vereinbarung möglich</p>
+                  </div>
+               </div>
+
+               <div>
+                  <h2 class="text-2xl font-semibold mb-4">Kontaktformular</h2>
+                  <form class="space-y-4">
+                     <div>
+                        <label for="name" class="block mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                     </div>
+                     <div>
+                        <label for="email" class="block mb-1">E-Mail</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                     </div>
+                     <div>
+                        <label for="subject" class="block mb-1">Betreff</label>
+                        <input type="text" id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+                     </div>
+                     <div>
+                        <label for="message" class="block mb-1">Nachricht</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded-md" required></textarea>
+                     </div>
+                     <div>
+                        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Nachricht senden</button>
+                     </div>
+                  </form>
+               </div>
+            </section>
+         </div>
+      </main>
+      
+      <footer class="bg-gray-800 text-white py-12 text-center">
+         <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; 2025 FSZM Documentation</p>
+            <div class="flex justify-center space-x-4 mt-4">
+               <a href="#" class="hover:text-blue-300">Impressum</a>
+               <a href="#" class="hover:text-blue-300">Datenschutz</a>
+               <a href="contact.html" class="hover:text-blue-300 text-blue-400">Kontakt</a>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
