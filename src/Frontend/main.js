@@ -2,6 +2,7 @@
 import { setupScrollAnimations } from './Components/ScrollAnimation/scrollAnimations';
 import { initMobileMenu } from './Components/BurgerMenu/mobileMenu';
 import { initSwipers } from './Components/SwiperGallery/swiper';
+import { initParallax } from './Components/Parallax/parallax';
 
 /**
  * Initialize all application components
@@ -15,13 +16,12 @@ const initPage = async () => {
     await setupScrollAnimations();
     await initMobileMenu();
     await initSwipers();
-
+    await initParallax();
 
     // Log initialization results
     const totalTime = performance.now() - timerStart;
 
     console.log(`Application initialized in ${totalTime.toFixed(2)} milliseconds`);
-
   } catch (error) {
     console.error('Error during application initialization:', error);
   }

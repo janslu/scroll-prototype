@@ -9,44 +9,67 @@
       <link rel="stylesheet" href="/src/Frontend/styles.css">
    </head>
    <body class="bg-background text-gray-800">
-      <header class="bg-gray-800 text-white sticky top-0 z-50">
-         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="logo flex items-center gap-4">
-               <img src="images/map.png" alt="Logo" class="w-10 h-auto" />
-               <span class="font-semibold">FSZM</span>
+      <header class="main-navigation-container">
+         <div class="main-navigation-wrapper container">
+            <div class="logo">
+               <a href="/">
+                  FSZM
+               </a>
             </div>
 
             <!-- Mobile menu button -->
-            <button class="menu-toggle md:hidden" aria-expanded="false" aria-label="Toggle menu">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+               <svg xmlns="http://www.w3.org/2000/svg" class="burger-menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                </svg>
             </button>
 
-            <!-- Desktop navigation -->
-            <nav class="hidden md:block">
-               <ul class="flex space-x-6">
-                  <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
-                  <li><a href="about.html" class="hover:text-blue-300">Über uns</a></li>
-                  <li><a href="contact.html" class="hover:text-blue-300 text-blue-400">Kontakt</a></li>
-               </ul>
+            <!-- Unified navigation -->
+            <nav class="site-navigation">
+               <div class="nav-inner">
+                  <!-- Close button for mobile -->
+                  <button class="close-menu-button" aria-label="Close menu" data-close-menu>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                  </button>
+                  <ul class="nav-list">
+                     <li><a href="index.html">Home</a></li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="informationen.html" class="submenu-link">Informationen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="verdingkinder.html">Verdingkinder</a></li>
+                           <li><a href="zwangsadoptionen.html">Zwangsadoptionen</a></li>
+                           <li><a href="zwangssterilisationen.html">Zwangssterilisationen</a></li>
+                        </ul>
+                     </li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="ressourcen.html" class="submenu-link">Ressourcen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="archiv.html">Archiv</a></li>
+                           <li><a href="dokumente.html">Dokumente</a></li>
+                           <li><a href="zeitzeugen.html">Zeitzeugen</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="about.html">Über uns</a></li>
+                     <li><a href="contact.html">Kontakt</a></li>
+                  </ul>
+               </div>
             </nav>
-         </div>
-
-         <!-- Mobile menu -->
-         <div class="mobile-menu">
-            <div class="p-6">
-               <button class="absolute top-4 right-4 text-white" aria-label="Close menu" data-close-menu>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-               </button>
-               <ul class="mt-8 space-y-4">
-                  <li><a href="index.html" class="text-white hover:text-blue-300 block py-2">Home</a></li>
-                  <li><a href="about.html" class="text-white hover:text-blue-300 block py-2">Über uns</a></li>
-                  <li><a href="contact.html" class="text-blue-400 hover:text-blue-300 block py-2">Kontakt</a></li>
-               </ul>
-            </div>
          </div>
 
          <!-- Menu overlay -->
@@ -61,7 +84,7 @@
                <div>
                   <h2 class="text-2xl font-semibold mb-4">Kontaktieren Sie uns</h2>
                   <p class="mb-6">
-                     Für Fragen, Anregungen oder Informationen zu fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen 
+                     Für Fragen, Anregungen oder Informationen zu fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen
                      in der Schweiz stehen wir Ihnen gerne zur Verfügung.
                   </p>
                   <div class="mb-6">
@@ -112,7 +135,7 @@
             </section>
          </div>
       </main>
-      
+
       <footer class="bg-gray-800 text-white py-12 text-center">
          <div class="container mx-auto px-4">
             <p class="mb-2">&copy; 2025 FSZM Documentation</p>

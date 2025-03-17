@@ -1,0 +1,19 @@
+
+
+ /* Flex layout styles */
+ .content .map-container {
+   @apply mx-[-8rem] my-8 gap-0;
+ }
+
+ .map-container .map,
+ .map-container .text {
+   @apply py-24 px-6;
+ }
+
+ .map-container .map {
+   @apply bg-gray-200;
+ }
+
+ .map-container .text {
+   @apply bg-blue-100;
+ }

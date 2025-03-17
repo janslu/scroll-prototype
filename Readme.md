@@ -1,97 +1,89 @@
-# FSZM Scroll Prototype
+# Fürsorgerische Zwangsmassnahmen Prototype
 
-Interactive scroll animation prototype for displaying historical content about "fürsorgerische Zwangsmassnahmen" in Swiss history.
+A prototype website documenting the history of fürsorgerische Zwangsmassnahmen (coercive welfare measures) in Switzerland. This project serves as a foundation for a future TYPO3 implementation.
 
-Live demo: https://janslu.github.io/scroll-prototype/
+## Project Overview
 
-## Features
+This prototype showcases the user interface and component structure for a documentary website about the history of coercive welfare measures in Switzerland. It focuses on:
 
-- Smooth scroll-triggered animations using GSAP
-- Responsive design with Tailwind CSS
-- Mobile menu component
-- Swiper integration for touch-enabled sliders
-- Optimized build process with Vite
+- Documenting historical events
+- Presenting personal stories of those affected
+- Providing educational resources
+- Creating awareness about this chapter of Swiss history
 
-## Getting Started
+## Technical Stack
 
-### Prerequisites
-
-- Node.js (v18.0.0 or higher)
-- npm (latest version recommended)
-
-### Installation
-
-1. Clone the repository
-   ```bash
-   git clone <repository-url>
-   cd scroll-prototype
-   ```
-
-2. Install dependencies
-   ```bash
-   npm install
-   ```
-
-### Development
-
-Start the development server:
-```bash
-npm run dev
-```
-
-This will start the Vite development server and open your browser to `http://localhost:5173/`.
-
-### Building for Production
-
-Build the project for production:
-```bash
-npm run build
-```
-
-This will generate optimized files in the `dist` directory with:
-- `app.js` - Bundled JavaScript with all components
-- `app.css` - Compiled CSS including Tailwind utilities
-- Static assets in the `assets` directory
-
-### Preview Production Build
-
-To preview the production build locally:
-```bash
-npm run preview
-```
+- HTML5
+- CSS3 with Tailwind CSS
+- JavaScript (ES6+)
+- Component-based architecture
+- Mobile-first responsive design
 
 ## Project Structure
 
-- `/src/` - Source files
-  - `/js/` - JavaScript modules
-    - `/components/` - Reusable UI components
-  - `/styles/` - CSS files with Tailwind
-- `/images/` - Image assets
-- `/dist/` - Build output
-
-## Component Usage
-
-### Scroll Animations
-
-The scroll animations are powered by GSAP ScrollTrigger. The main configuration is in `src/js/scrollAnimations.js`.
-
-### Mobile Menu
-
-The mobile menu can be customized with data attributes. See `src/js/components/mobileMenu.js`.
-
-### Swiper
-
-Swiper instances can be configured using data attributes:
-
-```html
-<div class="swiper-container" 
-     data-slides-per-view="1" 
-     data-autoplay="true" 
-     data-loop="true">
-  <!-- Swiper content -->
-</div>
 ```
+/
+├── images/                 # Image assets
+├── src/
+│   └── Frontend/
+│       ├── Components/     # Reusable UI components
+│       ├── StyleSheets/    # Base styles and typography
+│       ├── main.js         # JavaScript entry point
+│       └── styles.css      # CSS entry point
+├── about.html              # About page
+├── contact.html            # Contact page
+├── index.html              # Homepage
+└── README.md               # This file
+```
+
+## Component System
+
+The project uses a component-based approach with:
+
+- Modular, reusable UI components
+- CSS using Tailwind's @apply directives
+- Minimal JavaScript where necessary
+- Detailed documentation for each component
+
+See [Components README](src/Frontend/Components/README.md) for detailed information on the component system.
+
+## Key Components
+
+- **Hero**: Large banner sections with background images
+- **Teaser**: Card-based content teasers in a responsive grid
+- **Quote**: Stylized quotation blocks with attribution
+- **TeamMember**: Profile cards for team members
+- **BurgerMenu**: Mobile navigation with dropdown submenus
+- **ScrollAnimation**: Scroll-triggered animations
+- **Parallax**: Simple parallax scrolling effects
+
+## Getting Started
+
+1. Clone the repository
+2. Open any HTML file in a browser to view the prototype
+3. No build process is required for viewing the prototype
+
+## Future Development
+
+This prototype is designed to be converted into a TYPO3 template. Key considerations for that process:
+
+- Component markup will form the basis for TYPO3 content elements
+- CSS files can be integrated into TYPO3's asset pipeline
+- JavaScript modules can be adapted for TYPO3's frontend
+
+## Browser Compatibility
+
+The prototype targets modern browsers with support for:
+- CSS Grid
+- Flexbox
+- CSS Variables
+- Modern JavaScript (ES6+)
 
 ## License
 
-ISC
+[MIT License](LICENSE)
+
+## Credits
+
+- Unsplash for placeholder images
+- Content based on historical documentation of fürsorgerische Zwangsmassnahmen in Switzerland

@@ -20,13 +20,13 @@ export default defineConfig({
             return 'app.css';
           }
           return 'assets/[name].[ext]';
-        }
-      }
-    }
+        },
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  }
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 });

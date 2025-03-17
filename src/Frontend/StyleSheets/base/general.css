@@ -1,0 +1,4 @@
+/* Content area styles */
+.content {
+   @apply max-w-4xl mx-auto my-4 px-16 py-32;
+ }

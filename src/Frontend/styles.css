@@ -2,10 +2,21 @@
 @import 'tailwindcss';
 
 @import './StyleSheets/base/fonts.css' layer(base);
+@import './StyleSheets/base/grids.css' layer(base);
+@import './StyleSheets/base/typography.css' layer(base);
+@import './StyleSheets/base/general.css' layer(base);
 
 @import './Components/ScrollAnimation/scrollAnimations.css' layer(components);
 @import './Components/BurgerMenu/mobileMenu.css' layer(components);
 @import './Components/SwiperGallery/swiper.css' layer(components);
+@import './Components/TeamMember/teamMember.css' layer(components);
+@import './Components/Parallax/parallax.css' layer(components);
+@import './Components/Hero/hero.css' layer(components);
+@import './Components/Teaser/teaser.css' layer(components);
+@import './Components/Quote/quote.css' layer(components);
+
+@import './StyleSheets/components/map-container.css' layer(components);
+
 
 @theme {
   --font-sans: Inter, system-ui, -apple-system, sans-serif;

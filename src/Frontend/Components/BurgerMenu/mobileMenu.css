@@ -58,3 +58,91 @@
 .menu-overlay.is-active {
     @apply opacity-100 block;
 }
+
+/* Submenu styles */
+.has-submenu {
+    @apply relative;
+}
+
+/* Nav item wrapper for flex layout */
+.nav-item-wrapper {
+    @apply flex items-center justify-between w-full;
+}
+
+/* Desktop dropdown submenu */
+@media (min-width: 768px) {
+    /* Hide the submenu toggle button on desktop */
+    .submenu-toggle {
+        @apply hidden;
+    }
+
+    /* Show the dropdown icon next to the link on desktop */
+    .submenu-link:after {
+        content: "▼";
+        @apply ml-1 text-xs;
+    }
+
+    .submenu {
+        @apply absolute left-0 top-full w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg
+               hidden opacity-0 transition-opacity duration-200 z-50;
+        padding-top: 0.5rem;
+        margin-top: 0; /* Remove margin to eliminate the gap */
+    }
+
+    /* Add padding at the bottom of the parent menu item to bridge the gap */
+    .has-submenu > .nav-item-wrapper {
+        @apply pb-2;
+    }
+
+    .has-submenu:hover .submenu {
+        @apply block opacity-100;
+    }
+
+    .submenu li {
+        @apply w-full;
+    }
+
+    .submenu a {
+        @apply px-4 py-2 w-full block text-sm;
+    }
+}
+
+/* Mobile accordion submenu */
+@media (max-width: 767px) {
+    .submenu {
+        @apply max-h-0 overflow-hidden transition-all duration-300 pl-4 mt-1 w-full;
+        display: block; /* Ensure it's always displayed but with 0 height */
+    }
+
+    .submenu.is-open {
+        @apply max-h-screen;
+    }
+
+    .submenu li {
+        @apply py-1;
+    }
+
+    /* Make submenu toggle take full width */
+    .has-submenu {
+        @apply w-full;
+    }
+
+    .submenu-link {
+        @apply flex-grow;
+    }
+
+    .submenu-toggle {
+        @apply bg-transparent border-0 text-white p-2 cursor-pointer;
+        min-width: 40px; /* Ensure the button has enough room for the icon */
+    }
+
+    /* Dropdown icon styling */
+    .dropdown-icon {
+        @apply transition-transform duration-200;
+        display: inline-block; /* Ensure the icon is always visible */
+    }
+
+    .submenu-toggle[aria-expanded="true"] .dropdown-icon {
+        @apply transform rotate-180;
+    }
+}

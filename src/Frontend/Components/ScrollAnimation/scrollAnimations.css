@@ -34,28 +34,6 @@
   @apply block font-semibold;
 }
 
-/* Content area styles */
-.content {
-  @apply max-w-4xl mx-auto my-4 px-16 py-32;
-}
-
-/* Flex layout styles */
-.content .flex {
-  @apply justify-center mx-[-8rem] my-8;
-}
-
-.flex .map,
-.flex .text {
-  @apply flex-1 py-24 px-4;
-}
-
-.flex .map {
-  @apply bg-gray-200;
-}
-
-.flex .text {
-  @apply bg-blue-100;
-}
 
 /* Caption positioning based on data attributes */
 [data-textbox-position='left'] .textbox {

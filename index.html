@@ -35,6 +35,36 @@
                   </button>
                   <ul class="nav-list">
                      <li><a href="index.html">Home</a></li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="informationen.html" class="submenu-link">Informationen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="verdingkinder.html">Verdingkinder</a></li>
+                           <li><a href="zwangsadoptionen.html">Zwangsadoptionen</a></li>
+                           <li><a href="zwangssterilisationen.html">Zwangssterilisationen</a></li>
+                        </ul>
+                     </li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="ressourcen.html" class="submenu-link">Ressourcen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="archiv.html">Archiv</a></li>
+                           <li><a href="dokumente.html">Dokumente</a></li>
+                           <li><a href="zeitzeugen.html">Zeitzeugen</a></li>
+                        </ul>
+                     </li>
                      <li><a href="about.html">Über uns</a></li>
                      <li><a href="contact.html">Kontakt</a></li>
                   </ul>
@@ -47,14 +77,94 @@
       </header>
 
       <main>
-         <div class="content">
-            <h1>Überblick über fürsorgerische Zwangsmassnahmen und Fremdplatzierungen</h1>
+         <!-- Hero Section -->
+         <section class="hero-container">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2134&q=85');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+               <div class="hero-text">
+                  <p class="hero-pretitle">Dokumentation & Aufarbeitung</p>
+                  <h1 class="hero-title">Fürsorgerische Zwangsmassnahmen in der Schweiz</h1>
+                  <p class="hero-subtitle">Ein wichtiges Kapitel der Schweizer Geschichte, das nicht vergessen werden darf. Wir dokumentieren und erinnern an das Schicksal der Betroffenen.</p>
+                  <a href="informationen.html" class="hero-button">Mehr erfahren</a>
+               </div>
+            </div>
+         </section>
 
-            <p class="mb-6">
+         <!-- Teaser Section -->
+         <section class="teaser-section">
+            <div class="content teaser-container">
+               <!-- Teaser 1 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1533854775446-95c4609da544?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Verdingkinder" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Verdingkinder</h2>
+                     <p class="teaser-description">Kinder, die als Arbeitskräfte auf Bauernhöfen platziert wurden und oft unter harten Bedingungen leben mussten.</p>
+                     <a href="verdingkinder.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Teaser 2 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Administrative Versorgungen" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Administrative Versorgungen</h2>
+                     <p class="teaser-description">Menschen wurden ohne richterliches Urteil in Anstalten eingewiesen, oft aufgrund von Armut oder "unsittlichem Lebenswandel".</p>
+                     <a href="administrative-versorgungen.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Teaser 3 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1541661538396-53ba2d051eed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zwangsadoptionen" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Zwangsadoptionen</h2>
+                     <p class="teaser-description">Kinder wurden ohne Einwilligung der Eltern zur Adoption freigegeben, insbesondere bei alleinstehenden Müttern.</p>
+                     <a href="zwangsadoptionen.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Quote Section -->
+         <section class="quote-section">
+            <div class="quote-container">
+               <div class="quote-mark">"</div>
+               <blockquote class="quote-text">
+                  Die Aufarbeitung der Vergangenheit ist nicht nur für die Betroffenen wichtig, sondern für die ganze Gesellschaft. Nur wenn wir aus der Geschichte lernen, können wir in Zukunft solche Ungerechtigkeiten verhindern.
+               </blockquote>
+               <p class="quote-author">Simonetta Sommaruga</p>
+               <p class="quote-role">Bundesrätin (2010-2022)</p>
+               <div class="quote-divider"></div>
+               <div class="quote-cta">
+                  <a href="zeitzeugen.html" class="quote-button">Zeitzeugen anhören</a>
+               </div>
+            </div>
+         </section>
+
+         <div class="content">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 mt-12">Überblick über fürsorgerische Zwangsmassnahmen und Fremdplatzierungen</h2>
+
+            <p>
                Die Schweiz ist seit vielen Jahren ein Sozialstaat. Dieser sorgt für Sicherheit und unterstützt die Menschen. Doch in der Vergangenheit brachte er auch Leid. Zwischen 1900 und 1981 griffen Behörden oft stark in das Leben von Menschen ein. Diese Eingriffe sollten angeblich die Betroffenen oder die Gesellschaft schützen. Man nannte sie fürsorgerische Zwangsmassnahmen. Sie richteten sich oft gegen Menschen, die anders lebten als es die Gesellschaft erwartete. Besonders Kinder und arme Menschen litten unter diesen Maßnahmen.
             </p>
 
-            <div class="flex">
+            <div class="grid-50-50 map-container">
                <div class="map">
                   <img src="images/map.svg" alt="Map" width="650" height="433" />
                </div>
@@ -66,6 +176,18 @@
 
             <p class="mb-6">Für viele Betroffene waren die Auswirkungen dieser Maßnahmen lebenslang spürbar. Sie verloren ihre Familien, Bildungschancen und persönliche Freiheit. Erst seit wenigen Jahren wird dieses Unrecht öffentlich aufgearbeitet. 2014 entschuldigte sich die Schweiz bei den Betroffenen und richtete Entschädigungsfonds ein. Doch viele Opfer leiden bis heute unter den Folgen.</p>
          </div>
+
+         <!-- Second Parallax Section with more advanced effect -->
+         <section class="parallax-container" style="height: 50vh; margin: 3rem 0;">
+            <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+               <div class="parallax-text">
+                  <h2 class="parallax-title">Die Geschichte aufarbeiten</h2>
+                  <p class="parallax-subtitle">Zeitzeugen berichten von ihren Erfahrungen</p>
+               </div>
+            </div>
+         </section>
 
          <div class="scroll-container">
             <div class="scroll-item" data-textbox-position="left">

@@ -1,0 +1,56 @@
+/* Team member card component */
+
+.team-section {
+  @apply py-12;
+}
+
+.team-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.team-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg;
+}
+
+.team-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.team-card-inner {
+  @apply flex flex-col items-center px-6 py-6;
+}
+
+.team-portrait {
+  @apply w-32 h-32 rounded-full overflow-hidden border-4 border-gray-100 mb-4;
+}
+
+.team-portrait img {
+  @apply w-full h-full object-cover;
+}
+
+.team-info {
+  @apply text-center;
+}
+
+.team-name {
+  @apply text-xl font-bold text-gray-800 mb-1;
+}
+
+.team-position {
+  @apply text-sm text-gray-600 mb-3;
+}
+
+.team-description {
+  @apply text-gray-700 text-sm leading-relaxed text-center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .team-container {
+    @apply gap-6;
+  }
+
+  .team-portrait {
+    @apply w-24 h-24;
+  }
+}

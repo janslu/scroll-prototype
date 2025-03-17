@@ -1,0 +1,61 @@
+/* Hero component styles */
+
+.hero-container {
+  @apply relative w-full overflow-hidden;
+  height: 80vh; /* Taller than parallax container */
+  min-height: 600px;
+}
+
+.hero-bg {
+  @apply absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.hero-content {
+  @apply absolute inset-0 flex items-center justify-center w-full h-full;
+  z-index: 1;
+}
+
+.hero-overlay {
+  @apply absolute inset-0 w-full h-full bg-gradient-to-b from-black/60 to-black/30;
+}
+
+.hero-text {
+  @apply relative z-10 text-center px-6 max-w-5xl mx-auto;
+}
+
+.hero-pretitle {
+  @apply text-white text-lg md:text-xl uppercase tracking-widest mb-3 font-light;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title {
+  @apply text-white text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  @apply text-white text-xl md:text-2xl font-medium mb-8 max-w-3xl mx-auto;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-button {
+  @apply inline-block bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-8
+         rounded-md shadow-md transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+}

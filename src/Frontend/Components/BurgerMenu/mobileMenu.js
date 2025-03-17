@@ -11,12 +11,14 @@ class MobileMenu {
       menuContainer: '.site-navigation',
       menuOverlay: '.menu-overlay',
       closeButton: '[data-close-menu]',
+      submenuToggles: '.submenu-toggle',
     };
 
     this.menuButton = null;
     this.menuContainer = null;
     this.menuOverlay = null;
     this.closeButton = null;
+    this.submenuToggles = [];
   }
 
   /**
@@ -30,6 +32,7 @@ class MobileMenu {
       this.menuContainer = document.querySelector(this.SELECTORS.menuContainer);
       this.menuOverlay = document.querySelector(this.SELECTORS.menuOverlay);
       this.closeButton = document.querySelector(this.SELECTORS.closeButton);
+      this.submenuToggles = document.querySelectorAll(this.SELECTORS.submenuToggles);
 
       // Check if required elements exist
       if (!this.menuButton || !this.menuContainer) {
@@ -53,6 +56,17 @@ class MobileMenu {
         this.menuOverlay.addEventListener('click', () => this.closeMenu());
       }
 
+      // Setup submenu toggles
+      if (this.submenuToggles.length > 0) {
+        this.submenuToggles.forEach(toggle => {
+          toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.toggleSubmenu(toggle);
+          });
+        });
+      }
+
       // Close menu on escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && this.isMenuOpen) {
@@ -60,8 +74,8 @@ class MobileMenu {
         }
       });
 
-      // Setup any menu links to close the menu when clicked
-      const menuLinks = this.menuContainer.querySelectorAll('a');
+      // Setup any menu links to close the menu when clicked (but not submenu toggles)
+      const menuLinks = this.menuContainer.querySelectorAll('a:not(.submenu-toggle)');
       menuLinks.forEach((link) => {
         link.addEventListener('click', () => this.closeMenu());
       });
@@ -121,6 +135,33 @@ class MobileMenu {
   }
 
   /**
+   * Toggle a submenu open/closed
+   * @param {HTMLElement} toggle - The submenu toggle element
+   */
+  toggleSubmenu(toggle) {
+    // Find the parent li element
+    const parentLi = toggle.closest('.has-submenu');
+    if (!parentLi) return;
+
+    // Find the submenu
+    const submenu = parentLi.querySelector('.submenu');
+    if (!submenu) return;
+
+    // Check if we're on mobile
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return; // Only toggle submenu on mobile
+
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    const newState = !isOpen;
+
+    console.log('Toggle submenu:', { isOpen, newState, toggle, submenu });
+
+    // Toggle the submenu classes
+    toggle.setAttribute('aria-expanded', String(newState));
+    submenu.classList.toggle('is-open', newState);
+  }
+
+  /**
    * Close the mobile menu
    */
   closeMenu() {
@@ -155,66 +196,3 @@ export async function initMobileMenu() {
 
 // Export the class for direct usage if needed
 export { MobileMenu };
-
-document.addEventListener('DOMContentLoaded', () => {
-  const siteNavigation = document.querySelector('.site-navigation');
-  const menuToggle = document.querySelector('.menu-toggle');
-  const closeButton = document.querySelector('[data-close-menu]');
-  const menuOverlay = document.querySelector('.menu-overlay');
-
-  if (!siteNavigation || !menuToggle || !closeButton || !menuOverlay) {
-    console.warn('Mobile menu elements not found, skipping initialization');
-    return;
-  }
-
-  siteNavigation.classList.add('is-initialized');
-
-  // Handler for clicks outside menu
-  function handleOutsideClick(event) {
-    if (!siteNavigation.contains(event.target) && !menuToggle.contains(event.target)) {
-      closeMenu();
-    }
-  }
-
-  // Handler for escape key
-  function handleEscKey(event) {
-    if (event.key === 'Escape') {
-      closeMenu();
-    }
-  }
-
-  // Toggle menu
-  function toggleMenu(e) {
-    e.stopPropagation();
-    const isOpening = !siteNavigation.classList.contains('is-active');
-
-    siteNavigation.classList.toggle('is-active');
-    menuOverlay.classList.toggle('is-active');
-    menuToggle.setAttribute('aria-expanded', isOpening);
-
-    // Add or remove document listeners based on menu state
-    if (isOpening) {
-      document.addEventListener('mousedown', handleOutsideClick);
-      document.addEventListener('keydown', handleEscKey);
-    } else {
-      document.removeEventListener('mousedown', handleOutsideClick);
-      document.removeEventListener('keydown', handleEscKey);
-    }
-  }
-
-  // Close menu
-  function closeMenu() {
-    siteNavigation.classList.remove('is-active');
-    menuOverlay.classList.remove('is-active');
-    menuToggle.setAttribute('aria-expanded', false);
-
-    // Remove document listeners when menu closes
-    document.removeEventListener('mousedown', handleOutsideClick);
-    document.removeEventListener('keydown', handleEscKey);
-  }
-
-  // Event listeners for menu controls
-  menuToggle.addEventListener('click', toggleMenu);
-  closeButton.addEventListener('click', closeMenu);
-  menuOverlay.addEventListener('click', closeMenu);
-});

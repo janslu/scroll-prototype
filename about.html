@@ -9,44 +9,67 @@
       <link rel="stylesheet" href="/src/Frontend/styles.css">
    </head>
    <body class="bg-background text-gray-800">
-      <header class="bg-gray-800 text-white sticky top-0 z-50">
-         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="logo flex items-center gap-4">
-               <img src="images/map.png" alt="Logo" class="w-10 h-auto" />
-               <span class="font-semibold">FSZM</span>
+      <header class="main-navigation-container">
+         <div class="main-navigation-wrapper container">
+            <div class="logo">
+               <a href="/">
+                  FSZM
+               </a>
             </div>
 
             <!-- Mobile menu button -->
-            <button class="menu-toggle md:hidden" aria-expanded="false" aria-label="Toggle menu">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+               <svg xmlns="http://www.w3.org/2000/svg" class="burger-menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                </svg>
             </button>
 
-            <!-- Desktop navigation -->
-            <nav class="hidden md:block">
-               <ul class="flex space-x-6">
-                  <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
-                  <li><a href="about.html" class="hover:text-blue-300 text-blue-400">Über uns</a></li>
-                  <li><a href="contact.html" class="hover:text-blue-300">Kontakt</a></li>
-               </ul>
+            <!-- Unified navigation -->
+            <nav class="site-navigation">
+               <div class="nav-inner">
+                  <!-- Close button for mobile -->
+                  <button class="close-menu-button" aria-label="Close menu" data-close-menu>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                  </button>
+                  <ul class="nav-list">
+                     <li><a href="index.html">Home</a></li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="informationen.html" class="submenu-link">Informationen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="verdingkinder.html">Verdingkinder</a></li>
+                           <li><a href="zwangsadoptionen.html">Zwangsadoptionen</a></li>
+                           <li><a href="zwangssterilisationen.html">Zwangssterilisationen</a></li>
+                        </ul>
+                     </li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="ressourcen.html" class="submenu-link">Ressourcen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="archiv.html">Archiv</a></li>
+                           <li><a href="dokumente.html">Dokumente</a></li>
+                           <li><a href="zeitzeugen.html">Zeitzeugen</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="about.html" class="active">Über uns</a></li>
+                     <li><a href="contact.html">Kontakt</a></li>
+                  </ul>
+               </div>
             </nav>
-         </div>
-
-         <!-- Mobile menu -->
-         <div class="mobile-menu">
-            <div class="p-6">
-               <button class="absolute top-4 right-4 text-white" aria-label="Close menu" data-close-menu>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-               </button>
-               <ul class="mt-8 space-y-4">
-                  <li><a href="index.html" class="text-white hover:text-blue-300 block py-2">Home</a></li>
-                  <li><a href="about.html" class="text-blue-400 hover:text-blue-300 block py-2">Über uns</a></li>
-                  <li><a href="contact.html" class="text-white hover:text-blue-300 block py-2">Kontakt</a></li>
-               </ul>
-            </div>
          </div>
 
          <!-- Menu overlay -->
@@ -60,29 +83,129 @@
             <section class="mb-12">
                <h2 class="text-2xl font-semibold mb-4">Unser Projekt</h2>
                <p class="mb-6">
-                  Dieses Projekt dokumentiert die Geschichte der fürsorgerischen Zwangsmassnahmen in der Schweiz. 
+                  Dieses Projekt dokumentiert die Geschichte der fürsorgerischen Zwangsmassnahmen in der Schweiz.
                   Wir möchten die historischen Ereignisse aufarbeiten und den Betroffenen eine Stimme geben.
                </p>
                <p class="mb-6">
-                  Durch die Dokumentation und Aufarbeitung dieser schwierigen Kapitel der Schweizer Geschichte 
+                  Durch die Dokumentation und Aufarbeitung dieser schwierigen Kapitel der Schweizer Geschichte
                   tragen wir dazu bei, dass ähnliche Ungerechtigkeiten in der Zukunft nicht mehr geschehen.
                </p>
             </section>
 
-            <section class="mb-12">
-               <h2 class="text-2xl font-semibold mb-4">Unser Team</h2>
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div class="bg-gray-100 p-4 rounded-lg">
-                     <h3 class="text-xl font-medium mb-2">Dr. Anna Meier</h3>
-                     <p class="text-gray-700">Historikerin und Projektleiterin</p>
+            <section class="team-section mb-12">
+               <h2>Unser Team</h2>
+
+               <div class="team-container">
+                  <!-- Team Member 1 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Dr. Anna Meier">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Dr. Anna Meier</h3>
+                           <p class="team-position">Historikerin und Projektleiterin</p>
+                           <p class="team-description">Spezialisiert auf die Geschichte der Sozialfürsorge in der Schweiz im 20. Jahrhundert.</p>
+                        </div>
+                     </div>
                   </div>
-                  <div class="bg-gray-100 p-4 rounded-lg">
-                     <h3 class="text-xl font-medium mb-2">Prof. Thomas Brunner</h3>
-                     <p class="text-gray-700">Sozialwissenschaftler</p>
+
+                  <!-- Team Member 2 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Prof. Thomas Brunner">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Prof. Thomas Brunner</h3>
+                           <p class="team-position">Sozialwissenschaftler</p>
+                           <p class="team-description">Forscht zu den Auswirkungen von institutioneller Unterbringung auf Kinder und Jugendliche.</p>
+                        </div>
+                     </div>
                   </div>
-                  <div class="bg-gray-100 p-4 rounded-lg">
-                     <h3 class="text-xl font-medium mb-2">Maria Schmidt</h3>
-                     <p class="text-gray-700">Archivarin</p>
+
+                  <!-- Team Member 3 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Maria Schmidt">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Maria Schmidt</h3>
+                           <p class="team-position">Archivarin</p>
+                           <p class="team-description">Verantwortlich für die Dokumentation und Archivierung historischer Quellen.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Team Member 4 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Dr. Stefan Berger">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Dr. Stefan Berger</h3>
+                           <p class="team-position">Rechtshistoriker</p>
+                           <p class="team-description">Experte für die rechtlichen Aspekte der fürsorgerischen Zwangsmassnahmen.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Team Member 5 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Laura Knecht">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Laura Knecht</h3>
+                           <p class="team-position">Projektkoordinatorin</p>
+                           <p class="team-description">Koordiniert die verschiedenen Forschungsprojekte und öffentlichen Veranstaltungen.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Team Member 6 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Dr. Michael Huber">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Dr. Michael Huber</h3>
+                           <p class="team-position">Soziologe</p>
+                           <p class="team-description">Untersucht die gesellschaftlichen Strukturen, die zu den Zwangsmassnahmen führten.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Team Member 7 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/women/89.jpg" alt="Sophie Roth">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Sophie Roth</h3>
+                           <p class="team-position">Kulturwissenschaftlerin</p>
+                           <p class="team-description">Erforscht die kulturellen Aspekte und den Umgang mit diesem Teil der Schweizer Geschichte.</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Team Member 8 -->
+                  <div class="team-card">
+                     <div class="team-card-inner">
+                        <div class="team-portrait">
+                           <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Peter Widmer">
+                        </div>
+                        <div class="team-info">
+                           <h3 class="team-name">Peter Widmer</h3>
+                           <p class="team-position">Zeitzeuge und Berater</p>
+                           <p class="team-description">Bringt als Betroffener die wichtige Perspektive der Zeitzeugen in das Projekt ein.</p>
+                        </div>
+                     </div>
                   </div>
                </div>
             </section>
@@ -98,7 +221,7 @@
             </section>
          </div>
       </main>
-      
+
       <footer class="bg-gray-800 text-white py-12 text-center">
          <div class="container mx-auto px-4">
             <p class="mb-2">&copy; 2025 FSZM Documentation</p>

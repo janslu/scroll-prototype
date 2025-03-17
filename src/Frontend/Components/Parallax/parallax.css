@@ -1,0 +1,60 @@
+/* Parallax component styles */
+
+.parallax-container {
+  @apply relative w-full overflow-hidden;
+  height: 70vh; /* Adjust height as needed */
+}
+
+.parallax-bg {
+  @apply absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-content {
+  @apply absolute inset-0 flex items-center justify-center w-full h-full;
+  z-index: 1;
+}
+
+.parallax-overlay {
+  @apply absolute inset-0 w-full h-full bg-black/40;
+}
+
+.parallax-text {
+  @apply relative z-10 text-center px-6 max-w-4xl mx-auto;
+}
+
+.parallax-title {
+  @apply text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-subtitle {
+  @apply text-white text-xl md:text-2xl font-medium;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Simple parallax effect using CSS only */
+.parallax-simple {
+  @apply bg-fixed;
+}
+
+/* For browsers that support perspective property */
+@supports (perspective: 1px) {
+  .parallax-advanced {
+    perspective: 1px;
+    height: 70vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective-origin: center top;
+  }
+
+  .parallax-layer-back {
+    transform: translateZ(-1px) scale(2);
+    transform-origin: center top;
+  }
+
+  .parallax-layer-base {
+    transform: translateZ(0);
+  }
+}

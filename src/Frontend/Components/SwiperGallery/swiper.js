@@ -105,7 +105,7 @@ class SwiperManager {
             },
           },
           on: {
-            init: function(swiper) {
+            init: function (swiper) {
               // Store the swiper instance for external access
               this.swipers.set(swiperId, swiper);
               resolve(swiper);

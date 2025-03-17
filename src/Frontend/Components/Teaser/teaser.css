@@ -1,0 +1,58 @@
+/* Teaser component styles */
+
+.teaser-section {
+  @apply py-16 bg-gray-50;
+}
+
+.teaser-container {
+  @apply mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl;
+}
+
+.teaser-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+}
+
+.teaser-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.teaser-image {
+  @apply w-full h-48 md:h-56 lg:h-64 object-cover;
+}
+
+.teaser-content {
+  @apply p-6;
+}
+
+.teaser-title {
+  @apply text-xl md:text-2xl font-bold text-gray-800 mb-3;
+}
+
+.teaser-description {
+  @apply text-gray-600 mb-4;
+}
+
+.teaser-link {
+  @apply inline-flex items-center font-medium text-blue-600 hover:text-blue-800;
+}
+
+.teaser-link-icon {
+  @apply ml-2 w-4 h-4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .teaser-section {
+    @apply py-12;
+  }
+
+  .teaser-container {
+    @apply gap-6;
+  }
+}
+
+@media (max-width: 480px) {
+  .teaser-section {
+    @apply py-8;
+  }
+}
