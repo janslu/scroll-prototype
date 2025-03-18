@@ -1,5 +1,5 @@
 /**
- * Enhanced Parallax Effect
+ * Simple and reliable Parallax Effect
  * Add smooth parallax scrolling effect to background images
  */
 
@@ -19,15 +19,14 @@ function initParallax() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Only apply parallax effect when element is visible
           if (entry.isIntersecting) {
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', function() {
               applyParallaxEffect(entry.target);
             });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: "100px 0px" }
     );
 
     parallaxElements.forEach((element) => {
@@ -62,21 +61,32 @@ function applyParallaxEffect(element) {
   const scrollPosition = window.pageYOffset;
   const containerTop = container.offsetTop;
   const containerHeight = container.offsetHeight;
+  const windowHeight = window.innerHeight;
 
-  // Only apply effect when container is in view
+  // Only apply effect when container is in view or near view
   if (
-    scrollPosition + window.innerHeight < containerTop ||
-    scrollPosition > containerTop + containerHeight
+    scrollPosition + windowHeight < containerTop - 100 ||
+    scrollPosition > containerTop + containerHeight + 100
   ) {
     return;
   }
 
-  // Calculate parallax offset
-  const speed = 0.4; // Adjust parallax speed (0.1 to 0.5 is typical)
-  const offset = (scrollPosition - containerTop) * speed;
+  // More pronounced parallax calculation
+  // Use a fixed speed or data attribute with higher default value (0.5 instead of 0.3)
+  const speed = parseFloat(container.dataset.parallaxSpeed) || 0.5;
 
-  // Apply transform
-  element.style.transform = `translateY(${offset}px)`;
+  // Calculate how far we've scrolled relative to the container
+  // This creates a direct correlation between scrolling and image movement
+  const scrollDistance = scrollPosition - containerTop + windowHeight;
+  const scrollPercentage = scrollDistance / (containerHeight + windowHeight);
+
+  // Increase the maximum offset for more pronounced movement
+  const maxOffset = containerHeight * speed;
+  const offset = maxOffset * scrollPercentage;
+
+  // Apply transform with a negative offset to move in the opposite direction of scroll
+  // This creates a stronger parallax illusion
+  element.style.transform = `translateY(${-offset}px)`;
 }
 
 // Export for use in other files

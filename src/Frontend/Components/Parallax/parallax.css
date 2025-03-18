@@ -6,7 +6,12 @@
 }
 
 .parallax-bg {
-  @apply absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover;
+  @apply absolute w-full bg-center bg-no-repeat bg-cover;
+  /* Ensure image covers the full parallax area with extra space for more pronounced movement */
+  height: 160%; /* 60% extra height for more movement */
+  top: 0; /* Position to work with negative translateY movement */
+  left: 0;
+  right: 0;
   transform: translateZ(0);
   will-change: transform;
 }
@@ -52,6 +57,8 @@
   .parallax-layer-back {
     transform: translateZ(-1px) scale(2);
     transform-origin: center top;
+    /* Ensure full background is visible */
+    height: 160%;
   }
 
   .parallax-layer-base {
