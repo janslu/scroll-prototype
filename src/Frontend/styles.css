@@ -14,6 +14,7 @@
 @import './Components/Hero/hero.css' layer(components);
 @import './Components/Teaser/teaser.css' layer(components);
 @import './Components/Quote/quote.css' layer(components);
+@import './Components/ReadMore/readmore.css' layer(components);
 
 @import './StyleSheets/components/map-container.css' layer(components);
 
