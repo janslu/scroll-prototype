@@ -1,16 +1,5 @@
 # TeamMember Component
 
-A stylish and responsive component for displaying team member profiles with images, titles, descriptions, and optional social media links.
-
-## Features
-
-- Clean, professional design for team member profiles
-- Responsive layout that works on all screen sizes
-- Optional social media links
-- Customizable appearance including layout options
-- Hover effects for enhanced interactivity
-- Accessible design with proper semantic markup
-
 ## Installation
 
 1. Ensure the component files are in the correct directory:
@@ -23,7 +12,7 @@ A stylish and responsive component for displaying team member profiles with imag
    @import './Components/TeamMember/teamMember.css' layer(components);
    ```
 
-## Usage
+## Markup
 
 ### Basic Team Member
 
@@ -71,113 +60,3 @@ Add the following HTML structure to your page:
   </div>
 </div>
 ```
-
-### Grid Layout for Multiple Team Members
-
-```html
-<div class="team-grid">
-  <div class="team-member">
-    <!-- Team member 1 content -->
-  </div>
-  <div class="team-member">
-    <!-- Team member 2 content -->
-  </div>
-  <div class="team-member">
-    <!-- Team member 3 content -->
-  </div>
-  <div class="team-member">
-    <!-- Team member 4 content -->
-  </div>
-</div>
-```
-
-## Layout Variations
-
-### Card Layout
-
-For a boxed card layout with shadow:
-
-```html
-<div class="team-member card-layout">
-  <!-- Team member content -->
-</div>
-```
-
-### Horizontal Layout
-
-For a side-by-side layout (image left, content right):
-
-```html
-<div class="team-member horizontal-layout">
-  <!-- Team member content -->
-</div>
-```
-
-### Centered Layout
-
-For a centered layout with content below the image:
-
-```html
-<div class="team-member centered-layout">
-  <!-- Team member content -->
-</div>
-```
-
-## Customization
-
-### Colors and Styling
-
-Customize the appearance by adding additional classes or modifying the CSS:
-
-```css
-/* Custom team member styles */
-.team-member.custom-style {
-  @apply bg-blue-50 rounded-lg;
-}
-
-.team-member.custom-style .team-member-name {
-  @apply text-blue-700;
-}
-
-.team-member.custom-style .team-member-title {
-  @apply text-blue-500;
-}
-```
-
-### Image Options
-
-For circular images:
-
-```html
-<div class="team-member-image circular">
-  <img src="path/to/member-photo.jpg" alt="Team member name">
-</div>
-```
-
-For images with hover zoom effect:
-
-```html
-<div class="team-member-image hover-zoom">
-  <img src="path/to/member-photo.jpg" alt="Team member name">
-</div>
-```
-
-## Responsive Behavior
-
-The component is fully responsive:
-- On larger screens, maintains the designed layout
-- On medium screens, adapts based on available space
-- On mobile screens, stacks elements vertically for better readability
-
-## Accessibility
-
-- Uses semantic HTML structure
-- Includes proper alt text for images
-- Social links have appropriate aria labels
-- Maintains good color contrast for readability
-
-## Browser Compatibility
-
-Compatible with all modern browsers:
-- Chrome, Firefox, Safari, Edge
-- iOS Safari and Android Chrome/WebView

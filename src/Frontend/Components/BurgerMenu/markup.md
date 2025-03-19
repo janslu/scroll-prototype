@@ -1,15 +1,5 @@
 # BurgerMenu Component
 
-A responsive navigation component that transforms into a hamburger menu on mobile devices. Features dropdown submenus for both desktop and mobile views.
-
-## Features
-
-- Responsive design that adapts to all screen sizes
-- Hamburger toggle button for mobile navigation
-- Dropdown submenus on desktop (hover) and mobile (click)
-- Smooth transitions and animations
-- Accessible navigation with proper ARIA attributes
-- Keyboard navigation support
 
 ## Installation
 
@@ -34,7 +24,6 @@ A responsive navigation component that transforms into a hamburger menu on mobil
 
 ## Usage
 
-Add the following HTML structure to your page:
 
 ```html
 <header class="main-navigation-container">
@@ -109,50 +98,3 @@ For menu items with dropdowns, use this structure:
   </ul>
 </li>
 ```
-
-## Customization
-
-### Colors and Styling
-
-Modify the colors and styling in the CSS file:
-
-```css
-.main-navigation-container {
-  @apply bg-gray-800 text-white; /* Change background and text colors */
-}
-
-.nav-list a {
-  @apply hover:text-blue-300; /* Change hover color */
-}
-```
-
-### Responsive Breakpoints
-
-The menu switches between mobile and desktop at the medium (md) breakpoint:
-
-```css
-/* Mobile styles */
-@media (max-width: 767px) {
-  /* Mobile-specific styles */
-}
-
-/* Desktop styles */
-@media (min-width: 768px) {
-  /* Desktop-specific styles */
-}
-```
-
-## Accessibility
-
-The component includes:
-- Proper ARIA attributes for toggle states (`aria-expanded`)
-- Focus management for keyboard navigation
-- Screen reader support with appropriate labels
-
-## Browser Compatibility
-
-Works in all modern browsers. Uses:
-- CSS Grid and Flexbox
-- CSS transitions and transforms
-- ES6+ JavaScript features
-- DOM manipulation
