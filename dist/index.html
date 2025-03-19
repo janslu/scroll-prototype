@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Fürsorgerische Zwangsmassnahmen</title>
+      <meta name="description" content="Überblick über fürsorgerische Zwangsmassnahmen und Fremdplatzierungen in der Schweiz" />
+     <script type="module" crossorigin src="/app.js"></script>
+     <link rel="stylesheet" crossorigin href="/app.css">
+   </head>
+   <body class="bg-background text-gray-800">
+      <header class="main-navigation-container">
+         <div class="main-navigation-wrapper container">
+            <div class="logo">
+               <a href="/">
+                  FSZM
+               </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+               <svg xmlns="http://www.w3.org/2000/svg" class="burger-menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+               </svg>
+            </button>
+
+            <!-- Unified navigation -->
+            <nav class="site-navigation">
+               <div class="nav-inner">
+                  <!-- Close button for mobile -->
+                  <button class="close-menu-button" aria-label="Close menu" data-close-menu>
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                  </button>
+                  <ul class="nav-list">
+                     <li><a href="index.html">Home</a></li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="informationen.html" class="submenu-link">Informationen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="verdingkinder.html">Verdingkinder</a></li>
+                           <li><a href="zwangsadoptionen.html">Zwangsadoptionen</a></li>
+                           <li><a href="zwangssterilisationen.html">Zwangssterilisationen</a></li>
+                        </ul>
+                     </li>
+                     <li class="has-submenu">
+                        <div class="nav-item-wrapper">
+                           <a href="ressourcen.html" class="submenu-link">Ressourcen</a>
+                           <button class="submenu-toggle" aria-label="Toggle submenu" aria-expanded="false">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <polyline points="6 9 12 15 18 9"></polyline>
+                              </svg>
+                           </button>
+                        </div>
+                        <ul class="submenu">
+                           <li><a href="archiv.html">Archiv</a></li>
+                           <li><a href="dokumente.html">Dokumente</a></li>
+                           <li><a href="zeitzeugen.html">Zeitzeugen</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="about.html">Über uns</a></li>
+                     <li><a href="contact.html">Kontakt</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+
+         <!-- Menu overlay -->
+         <div class="menu-overlay"></div>
+      </header>
+
+      <main>
+         <!-- Hero Section -->
+         <section class="hero-container">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2134&q=85');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+               <div class="hero-text">
+                  <p class="hero-pretitle">Dokumentation & Aufarbeitung</p>
+                  <h1 class="hero-title">Fürsorgerische Zwangsmassnahmen in der Schweiz</h1>
+                  <p class="hero-subtitle">Ein wichtiges Kapitel der Schweizer Geschichte, das nicht vergessen werden darf. Wir dokumentieren und erinnern an das Schicksal der Betroffenen.</p>
+                  <a href="informationen.html" class="hero-button">Mehr erfahren</a>
+               </div>
+            </div>
+         </section>
+
+         <!-- Teaser Section -->
+         <section class="teaser-section">
+            <div class="content teaser-container">
+               <!-- Teaser 1 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1533854775446-95c4609da544?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Verdingkinder" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Verdingkinder</h2>
+                     <p class="teaser-description">Kinder, die als Arbeitskräfte auf Bauernhöfen platziert wurden und oft unter harten Bedingungen leben mussten.</p>
+                     <a href="verdingkinder.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Teaser 2 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Administrative Versorgungen" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Administrative Versorgungen</h2>
+                     <p class="teaser-description">Menschen wurden ohne richterliches Urteil in Anstalten eingewiesen, oft aufgrund von Armut oder "unsittlichem Lebenswandel".</p>
+                     <a href="administrative-versorgungen.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Teaser 3 -->
+               <div class="teaser-card">
+                  <img src="https://images.unsplash.com/photo-1541661538396-53ba2d051eed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zwangsadoptionen" class="teaser-image">
+                  <div class="teaser-content">
+                     <h2 class="teaser-title">Zwangsadoptionen</h2>
+                     <p class="teaser-description">Kinder wurden ohne Einwilligung der Eltern zur Adoption freigegeben, insbesondere bei alleinstehenden Müttern.</p>
+                     <a href="zwangsadoptionen.html" class="teaser-link">
+                        Mehr erfahren
+                        <svg class="teaser-link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="readmore-container py-12">
+            <div class="flex justify-center">
+            <a class="link-fx-1 lw7-color-contrast-higher" href="#0">
+               <span>Read more</span>
+               <svg class="lw7-icon" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="15.5"/><line x1="10" y1="18" x2="16" y2="12"/><line x1="16" y1="12" x2="22" y2="18" /></g></svg>
+            </a>
+         </section>
+
+         <!-- Quote Section -->
+         <section class="quote-section">
+            <div class="quote-container">
+               <div class="quote-mark">"</div>
+               <blockquote class="quote-text">
+                  Die Aufarbeitung der Vergangenheit ist nicht nur für die Betroffenen wichtig, sondern für die ganze Gesellschaft. Nur wenn wir aus der Geschichte lernen, können wir in Zukunft solche Ungerechtigkeiten verhindern.
+               </blockquote>
+               <p class="quote-author">Simonetta Sommaruga</p>
+               <p class="quote-role">Bundesrätin (2010-2022)</p>
+               <div class="quote-divider"></div>
+               <div class="quote-cta">
+                  <a href="zeitzeugen.html" class="quote-button">Zeitzeugen anhören</a>
+               </div>
+            </div>
+         </section>
+
+         <div class="content">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 mt-12">Überblick über fürsorgerische Zwangsmassnahmen und Fremdplatzierungen</h2>
+
+            <p>
+               Die Schweiz ist seit vielen Jahren ein Sozialstaat. Dieser sorgt für Sicherheit und unterstützt die Menschen. Doch in der Vergangenheit brachte er auch Leid. Zwischen 1900 und 1981 griffen Behörden oft stark in das Leben von Menschen ein. Diese Eingriffe sollten angeblich die Betroffenen oder die Gesellschaft schützen. Man nannte sie fürsorgerische Zwangsmassnahmen. Sie richteten sich oft gegen Menschen, die anders lebten als es die Gesellschaft erwartete. Besonders Kinder und arme Menschen litten unter diesen Maßnahmen.
+            </p>
+
+            <div class="grid-50-50 map-container">
+               <div class="map">
+                  <img src="/assets/map.svg" alt="Map" width="650" height="433" />
+               </div>
+               <div class="text">
+                  Im Jahr 2013 folgte die Entschuldigung von Bundesrätin Simonetta Sommaruga bei allen Opfern von fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen. Damit ist ein Prozess in Gang gekommen, in dem dieses schwierige Kapitel der Schweizer Sozialgeschichte aufgearbeitet wurde bzw. nach wie vor wird. <br><br>
+                  Quellenangaben.
+               </div>
+            </div>
+
+            <p class="mb-6">Für viele Betroffene waren die Auswirkungen dieser Maßnahmen lebenslang spürbar. Sie verloren ihre Familien, Bildungschancen und persönliche Freiheit. Erst seit wenigen Jahren wird dieses Unrecht öffentlich aufgearbeitet. 2014 entschuldigte sich die Schweiz bei den Betroffenen und richtete Entschädigungsfonds ein. Doch viele Opfer leiden bis heute unter den Folgen.</p>
+         </div>
+
+         <!-- Second Parallax Section with more advanced effect -->
+         <section class="parallax-container" style="height: 50vh; margin: 3rem 0;">
+            <div class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1490682143684-14369e18dce8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+               <div class="parallax-text">
+                  <h2 class="parallax-title">Die Geschichte aufarbeiten</h2>
+                  <p class="parallax-subtitle">Zeitzeugen berichten von ihren Erfahrungen</p>
+               </div>
+            </div>
+         </section>
+
+         <div class="scroll-container">
+            <div class="scroll-item" data-textbox-position="left">
+               <div class="image-container">
+                  <img
+                     src="/assets/img-1.jpg"
+                     width="1440"
+                     height="810"
+                     alt="Verdingkinder"
+                  />
+                  <p class="caption textbox">
+                     <span class="caption-header">Verdingkinder</span>
+                     Fremdplatzierte Kinder wurden in Betrieben festgehalten und als Arbeitskräfte eingesetzt.
+                  </p>
+                  <p class="source textbox">
+                     <span class="caption-header"><i>Quelle</i></span>
+                     <i>Veröffentlichungen der Unabhängigen Expertenkommission Administrative Versorgungen, Bd. 7, 2019, S. 63); rechts: Protokoll der Anhörung einer administrativ versorgten Person vom 20. Juli 1966 (Staatsarchiv des Kantons Schwyz, Akten 3/14_861/170 RRB 2338</i>
+                  </p>
+               </div>
+            </div>
+            <div class="scroll-item" data-textbox-position="right">
+               <div class="image-container">
+                  <img
+                     src="/assets/img-2.jpg"
+                     width="1440"
+                     height="810"
+                     alt="Zwangsadoptionen"
+                  />
+                  <p class="caption textbox">
+                     <span class="caption-header">Zwangsadoptionen</span>
+                     Kinder wurden gegen den Willen der Eltern zur Adoption freigegeben.
+                  </p>
+               </div>
+            </div>
+            <div class="scroll-item" data-textbox-position="left">
+               <div class="image-container">
+                  <img
+                     src="/assets/img-3.jpg"
+                     width="1440"
+                     height="810"
+                     alt="Zwangsabtreibungen und Zwangssterilisationen"
+                  />
+                  <p class="caption textbox">
+                     <span class="caption-header">Zwangsabtreibungen und Zwangssterilisationen</span>
+                     Frauen wurden gezwungen, ihre Schwangerschaft abzubrechen oder wurden sterilisiert, um weiteren Nachwuchs zu verhindern
+                  </p>
+                  <p class="source textbox">
+                     <span class="caption-header"><i>Quelle</i></span>
+                     <i>Veröffentlichungen der Unabhängigen Expertenkommission Administrative Versorgungen, Bd. 7, 2019, S. 63); rechts: Protokoll der Anhörung einer administrativ versorgten Person vom 20. Juli 1966 (Staatsarchiv des Kantons Schwyz, Akten 3/14_861/170 RRB 2338</i>
+                  </p>
+               </div>
+            </div>
+            <div class="scroll-item" data-textbox-position="right">
+               <div class="image-container">
+                  <img
+                     src="/assets/img-4.jpg"
+                     width="1440"
+                     height="810"
+                     alt="Administrative Versorgungen"
+                  />
+                  <p class="caption textbox">
+                     <span class="caption-header">Administrative Versorgungen</span>
+                     Freiheitsentzug in Anstalten oder Einrichtungen, meist ohne richterlichen Beschluss
+                  </p>
+                  <p class="source textbox">
+                     <span class="caption-header"><i>Quelle</i></span>
+                     <i>Veröffentlichungen der Unabhängigen Expertenkommission Administrative Versorgungen, Bd. 7, 2019, S. 63); rechts: Protokoll der Anhörung einer administrativ versorgten Person vom 20. Juli 1966 (Staatsarchiv des Kantons Schwyz, Akten 3/14_861/170 RRB 2338</i>
+                  </p>
+               </div>
+            </div>
+         </div>
+
+         <!-- Example of a Swiper component -->
+         <div class="max-w-4xl mx-auto my-16 px-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Historische Bilder</h2>
+            <div class="swiper-container relative" data-slides-per-view="1" data-autoplay="true" data-loop="true">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <img src="/assets/img-1.jpg" alt="Historisches Bild 1" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Verdingkinder</h3>
+                        <p>Fremdplatzierte Kinder wurden in Betrieben festgehalten und als Arbeitskräfte eingesetzt.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="/assets/img-2.jpg" alt="Historisches Bild 2" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Zwangsadoptionen</h3>
+                        <p>Kinder wurden gegen den Willen der Eltern zur Adoption freigegeben.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="/assets/img-3.jpg" alt="Historisches Bild 3" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Zwangsabtreibungen</h3>
+                        <p>Frauen wurden gezwungen, ihre Schwangerschaft abzubrechen.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="/assets/img-1.jpg" alt="Historisches Bild 1" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Verdingkinder</h3>
+                        <p>Fremdplatzierte Kinder wurden in Betrieben festgehalten und als Arbeitskräfte eingesetzt.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="/assets/img-2.jpg" alt="Historisches Bild 2" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Zwangsadoptionen</h3>
+                        <p>Kinder wurden gegen den Willen der Eltern zur Adoption freigegeben.</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="/assets/img-3.jpg" alt="Historisches Bild 3" class="w-full h-auto" />
+                     <div class="p-4 bg-gray-100">
+                        <h3 class="font-bold">Zwangsabtreibungen</h3>
+                        <p>Frauen wurden gezwungen, ihre Schwangerschaft abzubrechen.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+            </div>
+         </div>
+
+         <div class="content">
+            <p class="mb-6">
+               In vielen Fällen haben sie darunter schwer gelitten und ihre körperliche, psychische oder sexuelle Integrität oder ihre geistige Entwicklung wurde unmittelbar und in schwerer Weise beeinträchtigt. Im Jahr 2010 entschuldigte sich Bundesrätin Eveline Widmer-Schlumpf im Namen des Bundesrates für das grosse Leid, das den administrativ versorgten Personen angetan wurde. Im Jahr 2013 folgte die Entschuldigung von Bundesrätin Simonetta Sommaruga bei allen Opfern von fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen. Damit ist ein Prozess in Gang gekommen, in dem dieses schwierige Kapitel der Schweizer Sozialgeschichte aufgearbeitet wurde bzw. nach wie vor wird.
+            </p>
+         </div>
+      </main>
+
+      <footer class="bg-gray-800 text-white py-12 text-center">
+         <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; 2025 FSZM Documentation</p>
+            <div class="flex justify-center space-x-4 mt-4">
+               <a href="#" class="hover:text-blue-300">Impressum</a>
+               <a href="#" class="hover:text-blue-300">Datenschutz</a>
+               <a href="#" class="hover:text-blue-300">Kontakt</a>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

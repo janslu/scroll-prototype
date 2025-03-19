@@ -16,11 +16,6 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 
-# Build output
-dist
-dist-ssr
-*.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
