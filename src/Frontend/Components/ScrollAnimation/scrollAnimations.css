@@ -24,10 +24,12 @@
 
 /* Caption styles */
 .textbox {
-  @apply absolute bg-white text-black p-3 opacity-0 pointer-events-none leading-relaxed;
+  @apply absolute bg-white text-black p-3 opacity-0 pointer-events-none leading-relaxed shadow-lg;
   max-width: 40%;
   font-size: 0.9rem;
   letter-spacing: 0.015em;
+  min-width: 30%;
+  min-height: 6rem;
 }
 
 .caption-header {
