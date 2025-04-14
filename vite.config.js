@@ -10,6 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        document: resolve(__dirname, 'document.html'),
       },
       output: {
         // Ensure static filenames as per client requirements
